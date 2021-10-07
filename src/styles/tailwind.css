@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-pink-100 font-jetbrains;
+    @apply bg-indigo-50 font-jetbrains;
   }
 }
 
@@ -15,6 +15,16 @@
       "header header header"
       ". main ."
       "footer footer footer";
+  }
+
+  @variants responsive {
+    .grid-layout-wide {
+      grid-template-rows: 3rem auto 3rem;
+      grid-template-areas:
+        ". header ."
+        ". main ."
+        "footer footer footer";
+    }
   }
 
   .grid-header {
