@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-pink-100 font-jetbrains;
+  }
+}
+
+@layer utilities {
+  .grid-layout {
+    grid-template-rows: 3rem auto 3rem;
+    grid-template-areas:
+      "header header header"
+      ". main ."
+      "footer footer footer";
+  }
+
+  .grid-header {
+    grid-area: header;
+  }
+
+  .grid-main {
+    grid-area: main;
+  }
+
+  .grid-footer {
+    grid-area: footer;
+  }
+}
+
+
