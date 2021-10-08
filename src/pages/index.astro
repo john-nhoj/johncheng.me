@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
+import Header from '../components/Header.astro';
 
 interface MarkdownFrontmatter {
   publishDate: number;
@@ -22,6 +22,7 @@ let permalink = 'https://example.com/';
   </head>
 
   <body class="min-h-screen grid grid-layout md:grid-layout-wide">
-    <BlogHeader />
+    <Header />
+
   </body>
 </html>
