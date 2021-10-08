@@ -28,7 +28,7 @@ let permalink = 'https://example.com/';
       <section class="grid place-items-center gap-4 mt-20">
         <h2 class="sr-only">Introduction</h2>
         <img src={profilePicture} alt="Picture of John Cheng" class="rounded-full w-40">
-        <p class="text-3xl font-bold">John Cheng</p>
+        <span class="text-3xl font-bold">John Cheng</span>
         <p>Software Engineer at 
           <a class="underline" href="https://futurice.com">
             Futurice
@@ -48,7 +48,7 @@ let permalink = 'https://example.com/';
       </section>
       <section class="grid gap-4">
         <h2 class="text-2xl underline">Briefly about me</h2>
-        <div class="grid gap-4 grid-flow-col description-grid overflow-x-scroll pb-2">
+        <div class="grid gap-4 grid-flow-col description-grid-4 overflow-x-scroll pb-2">
           <article class="description-card">
             <svg class="text-indigo-700 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
             <h3 class="description-title">Current tech stack</h3>
@@ -70,6 +70,27 @@ let permalink = 'https://example.com/';
             <svg class="text-indigo-700 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             <h3 class="description-title">Fun fact</h3>
             <p>My archnemesis is the endivia. It is a leaf vegetable found in salads or tarts. I have tried all the recipes and I have never liked it...</p>
+            <p>Hit me up if you also dislike it!</p>
+          </article>
+        </div>
+      </section>
+      <section class="grid gap-4">
+        <h2 class="text-2xl underline">Top 3 projects</h2>
+        <div class="grid gap-4 grid-flow-col description-grid-3 overflow-x-scroll pb-2">
+          <article class="description-card">
+            <h3 class="description-title">Friendship App</h3>
+            <p>Back when I arrived in Finland and started working at Futurice, my first ever project was to mentor students.</p>
+            <p>I worked with them to develop a mobile application using React-Native and NodeJS.</p>
+          </article>
+          <article class="description-card">
+            <h3 class="description-title">Sanoma</h3>
+            <p>Sanoma is one of the biggest newspaper of Finland. There, I was part of the team that renewed their digital platform.</p>
+            <p>We used NextJS to give a refreshed look of Ilta-Sanomat and Helsingin Sanomat with a strong focus on performance and accessibility.</p>
+          </article>
+          <article class="description-card">
+            <h3 class="description-title">Online course platform</h3>
+            <p>My girlfriend is giving courses online and I have developed a platform for her using Contentful, NextJS and Firebase.</p>
+            <p>I used the Telegram API to automatically send her a message when a new student registers and she can directly accept or not the registration from the chat!</p>
           </article>
         </div>
       </section>

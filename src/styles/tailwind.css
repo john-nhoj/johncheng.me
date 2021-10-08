@@ -47,12 +47,16 @@
     @apply bg-white rounded-lg p-4 shadow-md grid gap-4 content-start;
   }
 
-  .description-grid {
+  .description-grid-3 {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+  
+  .description-grid-4 {
     grid-template-columns: repeat(4, minmax(250px, 1fr));
   }
 
   .description-title {
-    @apply text-lg uppercase leading-tight font-bold;
+    @apply text-xl uppercase leading-tight font-bold;
   }
 }
 
