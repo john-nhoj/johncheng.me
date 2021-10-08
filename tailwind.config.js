@@ -4,6 +4,9 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      backgroundColor: {
+        main: "#F6F1F1",
+      },
       fontFamily: {
         jetbrains: [
           "JetBrains Mono",
