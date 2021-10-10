@@ -6,6 +6,7 @@ module.exports = {
     Object.keys(process.env).forEach((key) => {
       const envVar = `${context}_${key}`;
       const val = process.env[envVar];
+      console.log(`Lookup for ${envVar}. Exists? ${!!val}`);
       if (process.env[envVar]) {
         console.log(`Key ${key} has been updated.`);
         process.env[key] = val;
