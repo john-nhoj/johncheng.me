@@ -7,7 +7,8 @@ module.exports = {
       // Check if key has context in it
       const keyNeedsOverride = key.startsWith(context);
       // If key starts with context, override with value
-      const cleanedKey = key.replace(context, "");
+      // Slice here removes the extra underscore in front of the variable
+      const cleanedKey = key.replace(context, "").slice(1);
       const val = process.env[key];
       if (keyNeedsOverride) {
         console.log(`Adding ${cleanedKey} to environment variables`);
