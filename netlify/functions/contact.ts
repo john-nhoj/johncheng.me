@@ -36,7 +36,7 @@ const handler: Handler = async (event) => {
     return INTERNAL_ERROR;
   }
   if (!TELEGRAM_CHAT_ID) {
-    console.error("Telegram chat id is not set.");
+    console.error("Telegram chat_id is not set.");
     return INTERNAL_ERROR;
   }
 
