@@ -9,9 +9,9 @@
     output_path = "reports/lighthouse.html"
 
 [[plugins]]
-  package = 'netlify-plugin-env'
+  package = "netlify-plugin-contextual-env"
   [plugins.inputs]
-    mode = 'prefix'
+    mode = "prefix"
 
 [dev]
   autoLaunch = false
