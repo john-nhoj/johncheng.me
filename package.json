@@ -13,7 +13,6 @@
     "@netlify/functions": "^0.7.2",
     "@netlify/plugin-lighthouse": "^2.1.2",
     "astro": "^0.20.9",
-    "netlify-plugin-contextual-env": "^0.3.0",
     "tailwindcss": "^2.2.16",
     "typescript": "^4.4.3"
   },
