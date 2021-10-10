@@ -1,0 +1,25 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm.svelte'
+
+const title = "Contact"
+const description = "Contact page"
+const permalink = ""
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} permalink={permalink} />
+  </head>
+
+  <body class="min-h-screen grid grid-layout md:grid-layout-wide gap-y-20">
+    <Header />
+    <main class="grid-main grid gap-4 auto-rows-min">
+      <h2 class="text-2xl uppercase">Contact</h2>
+      <ContactForm client:load/>
+    </main>
+    <Footer/>
+  </body>
+</html>
