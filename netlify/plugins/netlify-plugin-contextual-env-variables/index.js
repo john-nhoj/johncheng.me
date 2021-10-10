@@ -1,13 +1,18 @@
 module.exports = {
   onPreBuild: () => {
+    // Get context of the deployment. Can be PRODUCTION, STAGING or DEPLOY_PREVIEW
     const context = process.env.CONTEXT.toUpperCase().replace(/-/g, "_");
-    console.log(`Updating environment variables with context: ${context}`);
+    // Loop though environment variables
     Object.keys(process.env).forEach((key) => {
-      const envVar = `${context}_${key}`;
-      const val = process.env[envVar];
-      if (process.env[envVar]) {
-        console.log(`Key ${key} has been updated.`);
-        process.env[key] = val;
+      // Check if key has context in it
+      const keyNeedsOverride = key.startsWith(context);
+      // If key starts with context, override with value
+      // Slice here removes the extra underscore in front of the variable
+      const cleanedKey = key.replace(context, "").slice(1);
+      const val = process.env[key];
+      if (keyNeedsOverride) {
+        console.log(`Adding ${cleanedKey} to environment variables`);
+        process.env[cleanedKey] = val;
       }
     });
   },
