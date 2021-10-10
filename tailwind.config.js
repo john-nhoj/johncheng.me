@@ -26,6 +26,9 @@ module.exports = {
       backgroundColor: {
         main: "#F6F1F1",
       },
+      minHeight: {
+        textfield: "30rem",
+      },
       fontFamily: {
         jetbrains: [
           "JetBrains Mono",
