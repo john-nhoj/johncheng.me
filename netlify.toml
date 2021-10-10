@@ -2,11 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
-# [[plugins]]
-#   package = "@netlify/plugin-lighthouse"
-#   # optional, deploy the lighthouse report to a path under your site
-#   [plugins.inputs]
-#     output_path = "reports/lighthouse.html"
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  # optional, deploy the lighthouse report to a path under your site
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
 
 [[plugins]]
   package = "./netlify/plugins/netlify-plugin-contextual-env-variables"
