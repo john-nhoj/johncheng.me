@@ -44,6 +44,14 @@
   }
   
   @variants responsive {
+    .grid-layout-medium {
+      grid-template-columns: 2rem auto 2rem;
+    }
+
+    .grid-layout-large {
+      grid-template-columns: 5rem auto 5rem;
+    }
+
     .grid-layout-wide {
       grid-template-columns: 1fr 4fr 1fr;
     }
