@@ -4,18 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import profilePicture from '../assets/img/johncheng.jpg';
+import { BASE_URL, BASE_TITLE } from '../static/seo.ts'
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-}
-
-let title: string = 'John Cheng personal website';
-let description = 'The perfect starter for your perfect blog.';
-let permalink = 'https://example.com/';
-
-// Data Fetching: List all Markdown posts in the repo.
-// let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
-// allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+const pageName = "Home";
+let title: string = `${BASE_TITLE} ${pageName}`;
+let description = 'Home page of website';
+let permalink = BASE_URL;
 ---
 
 <html lang="en">

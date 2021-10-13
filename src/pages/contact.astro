@@ -3,10 +3,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ContactForm from '../components/ContactForm.svelte'
+import { BASE_URL, BASE_TITLE } from '../static/seo.ts'
 
-const title = "Contact"
+const pageName = "Contact"
+const title = `${BASE_TITLE} ${pageName}`
 const description = "Contact page"
-const permalink = ""
+const permalink = `${BASE_URL}/${pageName.toLowerCase()}`
 ---
 
 <html lang="en">
