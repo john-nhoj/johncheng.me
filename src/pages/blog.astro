@@ -1,0 +1,28 @@
+---
+import { BASE_TITLE, BASE_URL } from '../static/constants.ts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Main from '../layouts/Main.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+}
+
+const pageName = 'Blog';
+let title = `${BASE_TITLE} – ${pageName}`;
+let description = 'Blog page of johncheng.me';
+let permalink = `${BASE_URL}/blog`;
+
+let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+);
+let numberOfPosts = allPosts.length;
+---
+
+<BaseLayout {title} {description} {permalink}>
+  <Main>
+    {allPosts.map((p) => <BlogPostPreview post={p} />)}
+  </Main>
+</BaseLayout>
