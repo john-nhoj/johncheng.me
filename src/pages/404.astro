@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import RandomEmoji from '../components/RandomEmoji.svelte';
 import { BASE_URL, BASE_TITLE } from '../static/constants.ts';
 
-const pageName = "404 Not Found";
+const pageName = '404 Not Found';
 let title: string = `${BASE_TITLE} – ${pageName}`;
 let description = '404 page';
 let permalink = `${BASE_URL}/404`;
@@ -14,18 +14,24 @@ let permalink = `${BASE_URL}/404`;
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
+    <BaseHead {title} {description} {permalink} />
   </head>
 
-  <body class="min-h-screen grid grid-layout md:grid-layout-medium lg:grid-layout-large xl:grid-layout-wide gap-y-20">
+  <body
+    class="min-h-screen grid grid-layout md:grid-layout-medium lg:grid-layout-large xl:grid-layout-wide gap-y-20">
     <Header />
     <main class="grid-main grid place-content-center text-center gap-10">
       <h2 class="text-3xl font-bold">Oops, page not found...</h2>
       <RandomEmoji client:load />
       <section class="grid place-items-center gap-10">
-        <p>The page does not exist. Maybe you were looking for my <a href="/blog" class="underline">blog</a>.</p>
+        <p>
+          The page does not exist. Maybe you were looking for my <a
+            href="/blog"
+            class="underline">blog</a
+          >.
+        </p>
       </section>
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
