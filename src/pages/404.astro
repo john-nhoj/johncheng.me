@@ -1,8 +1,8 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Main from '../layouts/Main.astro';
+import Section from '../layouts/Section.astro';
 import RandomEmoji from '../components/RandomEmoji.svelte';
 import { BASE_URL, BASE_TITLE } from '../static/constants.ts';
 
@@ -12,26 +12,17 @@ let description = '404 page';
 let permalink = `${BASE_URL}/404`;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead {title} {description} {permalink} />
-  </head>
-
-  <body
-    class="min-h-screen grid grid-layout md:grid-layout-medium lg:grid-layout-large xl:grid-layout-wide gap-y-20">
-    <Header />
-    <main class="grid-main grid place-content-center text-center gap-10">
+<BaseLayout {title} {description} {permalink}>
+  <Main className="place-content-center">
+    <Section className="place-items-center text-center">
       <h2 class="text-3xl font-bold">Oops, page not found...</h2>
       <RandomEmoji client:load />
-      <section class="grid place-items-center gap-10">
-        <p>
-          The page does not exist. Maybe you were looking for my <a
-            href="/blog"
-            class="underline">blog</a
-          >.
-        </p>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+      <p>
+        The page does not exist. Maybe you were looking for my <a
+          href="/blog"
+          class="underline">blog</a
+        >.
+      </p>
+    </Section>
+  </Main>
+</BaseLayout>
