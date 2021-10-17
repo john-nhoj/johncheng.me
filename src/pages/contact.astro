@@ -1,7 +1,7 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Main from '../layouts/Main.astro';
+import Section from '../layouts/Section.astro';
 import ContactForm from '../components/ContactForm.svelte';
 import { BASE_URL, BASE_TITLE } from '../static/constants.ts';
 
@@ -11,17 +11,11 @@ const description = 'Contact page';
 const permalink = `${BASE_URL}/${pageName.toLowerCase()}`;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead {title} {description} {permalink} />
-  </head>
-
-  <body class="min-h-screen grid grid-layout md:grid-layout-wide gap-y-20">
-    <Header />
-    <main class="grid-main grid gap-4 auto-rows-min">
+<BaseLayout {title} {description} {permalink}>
+  <Main className="mt-10">
+    <Section>
       <h2 class="text-2xl uppercase">Contact</h2>
       <ContactForm client:load />
-    </main>
-    <Footer />
-  </body>
-</html>
+    </Section>
+  </Main>
+</BaseLayout>
