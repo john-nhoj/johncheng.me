@@ -31,9 +31,9 @@
   const { denominator, name, path } = emoji
 </script>
 
-<section class="grid place-items-center">
+<article class="grid place-items-center">
   <img src={path} alt={`Emoji of ${denominator} ${name}`} class="w-20 h-20"/>
   <p>
     Here is {denominator} {name} for you!
   </p>
-</section>
+</article>

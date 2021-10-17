@@ -6,53 +6,13 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview">
+<article class="description-card">
   <header>
-    <h3 class="publish-date">{post.publishDate}</h3>
-    <a href={post.url}><h1 class="title">{post.title}</h1></a>
+    <a href={post.url}><h2 class="description-title">{post.title}</h2></a>
+    <h3 class="description-subtitle">{post.publishDate}</h3>
   </header>
-  <main>
-    <p>{post.description}</p>
-    <a href={post.url}>Read more</a>
-  </main>
+  <p class="hidden md:block">{post.description}</p>
+  <footer>
+    <a class="underline" href={post.url}>Read more</a>
+  </footer>
 </article>
-
-<style>
-  .content :global(main > * + *) {
-    margin-top: 1rem;
-  }
-
-  .post-preview {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 4px solid var(--theme-divider);
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    justify-content: center;
-
-    padding-bottom: 2rem;
-  }
-
-  .title,
-  .author,
-  .publish-date {
-    margin: 0;
-  }
-
-  .publish-date,
-  .author {
-    font-size: 1.25rem;
-    color: var(--theme-text-lighter);
-  }
-
-  .title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--theme-text);
-  }
-</style>
