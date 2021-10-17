@@ -2,7 +2,9 @@
 import { BASE_TITLE, BASE_URL } from '../static/constants.ts';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Main from '../layouts/Main.astro';
+import Section from '../layouts/Section.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import NoPost from '../components/NoPost.astro';
 
 interface MarkdownFrontmatter {
   publishDate: number;
@@ -18,11 +20,15 @@ allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
 );
-let numberOfPosts = allPosts.length;
+let hasPosts = allPosts.length > 0;
+const centerMessage = !hasPosts ? '' : 'place-content-center';
 ---
 
 <BaseLayout {title} {description} {permalink}>
-  <Main>
-    {allPosts.map((p) => <BlogPostPreview post={p} />)}
+  <Main className={centerMessage}>
+    <Section>
+      {hasPosts && <NoPost />}
+      {allPosts.map((p) => <BlogPostPreview post={p} />)}
+    </Section>
   </Main>
 </BaseLayout>
