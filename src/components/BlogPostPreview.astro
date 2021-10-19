@@ -8,8 +8,8 @@ const { post } = Astro.props;
 
 <article class="description-card">
   <header>
-    <a href={post.url}><h2 class="description-title">{post.title}</h2></a>
-    <h3 class="description-subtitle">{post.publishDate}</h3>
+    <a href={post.url}><h3 class="font-bold">{post.title}</h3></a>
+    <p class="subtitle">{post.publishDate}</p>
   </header>
   <p class="hidden md:block">{post.description}</p>
   <footer>
