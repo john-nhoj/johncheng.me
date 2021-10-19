@@ -1,0 +1,23 @@
+@tailwind utilities;
+
+@layer utilities {
+  .grid-layout {
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  }
+
+  .grid-header {
+    grid-area: header;
+  }
+
+  .grid-main {
+    grid-area: main;
+  }
+
+  .grid-footer {
+    grid-area: footer;
+  }
+}

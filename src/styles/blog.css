@@ -1,0 +1,7 @@
+pre {
+  @apply overflow-scroll bg-red-300 p-4 rounded-md;
+}
+
+blockquote {
+  @apply border-l-8 border-gray-300 p-4;
+}
