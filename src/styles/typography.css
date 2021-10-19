@@ -1,0 +1,19 @@
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl uppercase underline;
+}
+
+h2 {
+  @apply text-2xl uppercase underline;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+@layer utilities {
+  .subtitle {
+    @apply italic text-sm;
+  }
+}

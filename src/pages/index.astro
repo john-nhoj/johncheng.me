@@ -14,7 +14,7 @@ let permalink = BASE_URL;
 
 <BaseLayout {title} {description} {permalink}>
   <Main className="mt-20">
-    <Section className="place-items-center">
+    <Section className="gap-4 place-items-center">
       <h2 class="sr-only">Introduction</h2>
       <div class="relative">
         <div
@@ -25,14 +25,14 @@ let permalink = BASE_URL;
           alt="Picture of John Cheng"
           class="relative rounded-full w-40" />
       </div>
-      <span class="text-3xl font-bold">John Cheng</span>
+      <p class="text-3xl font-bold">John Cheng</p>
       <p>
         Software Engineer at
         <a class="underline" href="https://futurice.com"> Futurice </a>
       </p>
-      <article class="grid grid-flow-col gap-4">
+      <nav class="grid grid-flow-col gap-4">
         <a href="https://github.com/john-nhoj">
-          <span class="sr-only">Link to Github</span>
+          <h2 class="sr-only">Link to Github</h2>
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ let permalink = BASE_URL;
             ></svg>
         </a>
         <a href="https://www.linkedin.com/in/john-nhoj/">
-          <span class="sr-only">Link to linkedIn</span>
+          <h2 class="sr-only">Link to linkedIn</h2>
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ let permalink = BASE_URL;
             ></svg>
         </a>
         <a href="https://www.instagram.com/nhoj.gnehc/">
-          <span class="sr-only">Link to Instagram</span>
+          <h2 class="sr-only">Link to Instagram</h2>
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +82,11 @@ let permalink = BASE_URL;
               d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path
             ><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
-      </article>
+      </nav>
     </Section>
-    <Section>
+    <Section className="gap-4">
       <Pulse>
-        <h2 class="text-2xl underline">Briefly about me</h2>
+        <h2>Briefly about me</h2>
         <div
           class="relative grid gap-4 grid-flow-col description-grid-4 overflow-x-scroll pb-2">
           <article class="description-card">
@@ -180,7 +180,7 @@ let permalink = BASE_URL;
         </div>
       </Pulse>
     </Section>
-    <Section>
+    <Section className="gap-4">
       <Pulse>
         <h2 class="text-2xl underline">Top 3 projects</h2>
         <div

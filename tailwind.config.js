@@ -27,7 +27,7 @@ module.exports = {
         main: '#F6F1F1',
       },
       minHeight: {
-        textfield: '30rem',
+        textfield: '25rem',
       },
       fontFamily: {
         jetbrains: [

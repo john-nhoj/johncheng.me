@@ -26,8 +26,8 @@ const centerMessage = hasPosts ? '' : 'place-content-center';
 
 <BaseLayout {title} {description} {permalink}>
   <Main className={`mt-4 ${centerMessage}`}>
-    <Section>
-      <h2 class="text-2xl underline">Blog Posts</h2>
+    <Section className="gap-4">
+      <h2>Blog Posts</h2>
       {!hasPosts && <NoPost />}
       {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </Section>
