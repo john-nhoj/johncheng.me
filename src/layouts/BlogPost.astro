@@ -1,24 +1,27 @@
 ---
-import { Markdown } from 'astro/components';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Main from '../layouts/Main.astro';
+import Section from '../layouts/Section.astro';
+import '../styles/blog.css';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } =
   content;
 ---
 
-<html lang={content.lang || 'en'}>
-  <head>
-    <BaseHead {title} {description} {permalink} />
-    <link rel="stylesheet" href="/blog.css" />
-  </head>
-
-  <body>
-    <Header />
-    <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-      <slot />
-    </BlogPost>
-  </body>
-</html>
+<BaseLayout {title} {description} {permalink}>
+  <Main>
+    <article>
+      <Section className="place-items-center">
+        {heroImage && <img width="720" height="420" loading="lazy" src={heroImage} alt={alt} class="md:w-full" />}
+      </Section>
+      <Section className="mt-4 gap-1 place-items-center text-center">
+        <h2 class="font-bold">{title}</h2>
+        <p class="subtitle">{publishDate}</p>
+      </Section>
+      <Section className="mt-4 gap-4">
+        <slot />
+      </Section>
+    </article>
+  </Main>
+</BaseLayout>
