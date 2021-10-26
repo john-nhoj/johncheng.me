@@ -16,8 +16,10 @@ const { title, description, publishDate, author, heroImage, permalink, alt } =
         {heroImage && <img width="720" height="420" loading="lazy" src={heroImage} alt={alt} class="md:w-full" />}
       </Section>
       <Section className="mt-4 gap-1 place-items-center text-center">
-        <h2 class="font-bold">{title}</h2>
-        <p class="subtitle">{publishDate}</p>
+        <div class="bg-white shadow-md p-2 md:p-8 rounded-md">
+          <h2>{title}</h2>
+          <p class="subtitle">{publishDate}</p>
+        </div>
       </Section>
       <Section className="mt-4 gap-4">
         <slot />
