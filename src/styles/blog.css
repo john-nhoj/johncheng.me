@@ -3,5 +3,23 @@ pre {
 }
 
 blockquote {
-  @apply border-l-8 border-gray-300 p-4;
+  @apply border-l-8 border-red-300 p-4 italic;
+}
+
+li {
+  @apply list-disc list-inside;
+}
+
+header li {
+  @apply list-none;
+}
+
+:not(pre) > code {
+  @apply bg-red-300 p-1 rounded-md;
+}
+
+h2,
+h3,
+h4 {
+  @apply mt-4;
 }
