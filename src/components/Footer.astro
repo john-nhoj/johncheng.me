@@ -4,4 +4,15 @@ const year = 2021;
 
 <footer class="grid-footer py-4 padding-x mt-5">
   &copy; {year} John Cheng | All Rights Reserved
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
 </footer>
