@@ -3,6 +3,17 @@
 @tailwind base;
 
 @layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar,
+  pre::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .scrollbar-hidden,
+  pre {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   /* Padding */
   .padding-x {
     @apply px-4 md:px-10 lg:px-20 xl:px-80;
