@@ -18,14 +18,16 @@ let permalink = BASE_URL;
       <h2 class="sr-only">Introduction</h2>
       <div class="relative">
         <div
-          class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-75">
+          class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-75"
+        >
         </div>
         <img
-          src={profilePicture}
+          src={Astro.resolve(profilePicture)}
           alt="Picture of John Cheng"
           width={160}
           height={160}
-          class="relative rounded-full w-40" />
+          class="relative rounded-full w-40"
+        />
       </div>
       <p class="text-3xl font-bold">John Cheng</p>
       <p>
@@ -46,8 +48,8 @@ let permalink = BASE_URL;
             stroke-linejoin="round"
             ><path
               d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-            ></path
-            ></svg>
+            ></path></svg
+          >
         </a>
         <a href="https://www.linkedin.com/in/john-nhoj/">
           <h2 class="sr-only">Link to linkedIn</h2>
@@ -62,12 +64,11 @@ let permalink = BASE_URL;
             stroke-linejoin="round"
             ><path
               d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-            ></path
-            ><rect x="2" y="9" width="4" height="12"></rect><circle
+            ></path><rect x="2" y="9" width="4" height="12"></rect><circle
               cx="4"
               cy="4"
-              r="2"></circle
-            ></svg>
+              r="2"></circle></svg
+          >
         </a>
         <a href="https://www.instagram.com/nhoj.gnehc/">
           <h2 class="sr-only">Link to Instagram</h2>
@@ -81,8 +82,12 @@ let permalink = BASE_URL;
             stroke-linecap="round"
             stroke-linejoin="round"
             ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path
-              d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path
-            ><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+              x1="17.5"
+              y1="6.5"
+              x2="17.51"
+              y2="6.5"></line></svg
+          >
         </a>
       </nav>
     </Section>
@@ -90,7 +95,8 @@ let permalink = BASE_URL;
       <Pulse>
         <h2>Briefly about me</h2>
         <div
-          class="relative grid gap-4 grid-flow-col description-grid-4 overflow-x-scroll pb-2 scrollbar-hidden">
+          class="relative grid gap-4 grid-flow-col description-grid-4 overflow-x-scroll pb-2 scrollbar-hidden"
+        >
           <article class="description-card">
             <svg
               class="text-indigo-700 w-6 h-6"
@@ -105,8 +111,8 @@ let permalink = BASE_URL;
                 x1="12"
                 y1="19"
                 x2="20"
-                y2="19"></line
-              ></svg>
+                y2="19"></line></svg
+            >
             <h3 class="description-title">Current tech stack</h3>
             <p>
               Currently, my main tools are React with NextJS for the Frontend
@@ -124,8 +130,9 @@ let permalink = BASE_URL;
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path
-              ><circle cx="12" cy="10" r="3"></circle></svg>
+              ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+              ></path><circle cx="12" cy="10" r="3"></circle></svg
+            >
             <h3 class="description-title">Where can you find me?</h3>
             <p>
               I grew up in France but am currently living in Helsinki and in the
@@ -143,13 +150,13 @@ let permalink = BASE_URL;
               stroke-linecap="round"
               stroke-linejoin="round"
               ><circle cx="12" cy="12" r="10"></circle><path
-                d="M8 14s1.5 2 4 2 4-2 4-2"></path
-              ><line x1="9" y1="9" x2="9.01" y2="9"></line><line
-                x1="15"
+                d="M8 14s1.5 2 4 2 4-2 4-2"></path><line
+                x1="9"
                 y1="9"
-                x2="15.01"
-                y2="9"></line
-              ></svg>
+                x2="9.01"
+                y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"
+              ></line></svg
+            >
             <h3 class="description-title">Hobbies</h3>
             <p>
               When I am not typing hard on my keyboard, you have a good chance
@@ -169,8 +176,8 @@ let permalink = BASE_URL;
               stroke-linecap="round"
               stroke-linejoin="round"
               ><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-              ></polygon
-              ></svg>
+              ></polygon></svg
+            >
             <h3 class="description-title">Fun fact</h3>
             <p>
               My archnemesis is the endivia. It is a leaf vegetable found in
@@ -186,7 +193,8 @@ let permalink = BASE_URL;
       <Pulse>
         <h2>Top 3 projects</h2>
         <div
-          class="relative grid gap-4 grid-flow-col description-grid-3 overflow-x-scroll pb-2 scrollbar-hidden">
+          class="relative grid gap-4 grid-flow-col description-grid-3 overflow-x-scroll pb-2 scrollbar-hidden"
+        >
           <article class="description-card">
             <h3 class="description-title">Friendship App</h3>
             <p>
