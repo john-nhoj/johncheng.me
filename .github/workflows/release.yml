@@ -16,5 +16,5 @@ jobs:
           git fetch --unshallow
           git checkout production
           git pull
-          git merge --no-ff main -m "$(date +'%Y-%m-%dT%H:%M:%S')"
+          git merge --no-ff origin/main -m "$(date +'%Y-%m-%dT%H:%M:%S')"
           git push
