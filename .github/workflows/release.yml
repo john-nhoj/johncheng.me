@@ -1,32 +1,20 @@
 name: Deploy on release
 on:
-  push:
-    branches:
-      - "ci/deploy-on-release"
-  # release:
-  #   types: ["published"]
+  release:
+    types: ["published"]
 jobs:
   merge-main-to-production:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-
       - name: Set git config
-      - run: |
+        run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
-
-      - name: Get current date
-      - run: echo "RELEASE_DATE::$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-      - name: Echo release date
-      - run: echo "$RELEASE_DATE"
-
-      # - name: Merge main to production
-      # - run: |
-      #     git fetch --unshallow
-      #     git checkout production
-      #     git pull
-      #     git merge --no-ff main -m "$RELEASE_DATE"
-      #     git push
+      - name: Merge main to production
+      - run: |
+          git fetch --unshallow
+          git checkout production
+          git pull
+          git merge --no-ff main -m "$(date +'%Y-%m-%dT%H:%M:%S')"
+          git push
