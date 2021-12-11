@@ -7,10 +7,8 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
+// @type {import('astro').AstroUserConfig}
+export default {
   // Enable the Preact renderer to support Preact JSX components.
   renderers: ['@astrojs/renderer-svelte'],
-  devOptions: {
-    tailwindConfig: './tailwind.config.js',
-  },
-});
+};
