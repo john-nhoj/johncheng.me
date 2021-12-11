@@ -12,7 +12,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "Github Actions"
       - name: Merge main to production
-      - run: |
+        run: |
           git fetch --unshallow
           git checkout production
           git pull
