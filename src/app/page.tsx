@@ -269,7 +269,7 @@ export default async function Home() {
           </p>
           <p className="text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m the founder and CEO of <a className='underline' href="https://koodikatu.com">Koodikatu</a>, 
-            an IT consulting company where we develop technologies that empower regular people to reach their dreams.
+            an IT consulting company where we develop technologies that empower people to reach their dreams.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
