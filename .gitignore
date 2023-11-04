@@ -19,3 +19,7 @@ yarn-error.log*
 
 # Netlify-specific files
 .netlify
+
+# Nextjs
+.next/
+next-env.d.ts
