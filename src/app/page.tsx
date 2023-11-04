@@ -188,7 +188,7 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'Mobal Oy',
-      title: 'Software Engineer',
+      title: 'Software Engineer (Remote)',
       logo: logoPlanetaria,
       start: '2022',
       end: {
@@ -197,7 +197,7 @@ function Resume() {
       },
     },
     {
-      company: 'Gubbe Oy',
+      company: 'Gubbe Oy (Remote)',
       title: 'Software Engineer',
       logo: logoAirbnb,
       start: '2021',
